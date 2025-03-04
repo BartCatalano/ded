@@ -18,7 +18,24 @@ caratteristiche:{
     background:"",
     
 }};
-// creo ogetto iniziale con le caratteristiche vuote
+// creo ogetto con bonus di classe
+const classBonuses = {
+  guerriero: { forza: 3 },
+  mago: { intelligenza: 3 },
+  ladro: { destrezza: 3 },
+  bardo: { carisma: 3 },
+  chierico: { saggezza: 3 },
+  druido: { saggezza: 3 },
+};
+// creo il bonus per la razza scelta
+const razzaBonuses = {
+  umano: { carisma: 1, forza: 1, destrezza: 1, intelligenza: 1, saggezza: 1, altezza: 120 },
+  elfo: { destrezza: 2, intelligenza: 1, saggezza: 1,altezza: 150 },
+  nano: { costituzione: 2, forza: 2, altezza: 50 },
+  mezzelfo: { carisma: 2, intelligenza: 1, saggezza: 1,altezza: 150 },
+  mezzorco: { forza: 2, costituzione: 1, altezza: 140 },
+  gnomo: { intelligenza: 2, destrezza: 1, carisma: 2, altezza: 40 },
+};
 
 function CreatePage() {
 
@@ -31,21 +48,24 @@ const [newPlayer,setNewPlayer] = useState(Player);
 
 
 const createNewPlayer = () => {
+  // prendo i bonus della classe scelta
+  const bonus = classBonuses[classe] || {};
+  const razzaBonus = razzaBonuses[razza] || {};
     setNewPlayer({
         nome:nameHero,
         razza:razza,
         classe:classe,
         statistiche:{
-            forza:Math.floor(Math.random()*6)+1,
-            destrezza:Math.floor(Math.random()*6)+1,
-            costituzione:Math.floor(Math.random()*6)+1,
-            intelligenza:Math.floor(Math.random()*6)+1,
-            saggezza:Math.floor(Math.random()*6)+1,
-            carisma:Math.floor(Math.random()*6)+1
+          forza: (Math.floor(Math.random() * 6) + 1) + (bonus.forza || 0) + (razzaBonus.forza || 0),
+          destrezza: (Math.floor(Math.random() * 6) + 1) + (bonus.destrezza || 0) + (razzaBonus.destrezza || 0),
+          costituzione: (Math.floor(Math.random() * 6) + 1) + (bonus.costituzione || 0) + (razzaBonus.costituzione || 0),
+          intelligenza: (Math.floor(Math.random() * 6) + 1) + (bonus.intelligenza || 0) + (razzaBonus.intelligenza || 0),
+          saggezza: (Math.floor(Math.random() * 6) + 1) + (bonus.saggezza || 0) + (razzaBonus.saggezza || 0),
+          carisma: (Math.floor(Math.random() * 6) + 1) + (bonus.carisma || 0) + (razzaBonus.carisma || 0),
         },
         caratteristiche:{
             allineamento:caratteristiche,
-            altezza:Math.floor(Math.random()*100)+40,
+            altezza:Math.floor(Math.random()*100) + razzaBonus.altezza,
             peso:Math.floor(Math.random()*100)+30,
         }
     });
@@ -140,7 +160,7 @@ const creazioneCaratteristiche = (e) => {
         </select>
      </div>
     </div>
-    // creazione del personaggio
+     {/* creazione del personaggio */}
     <div>
         <button onClick={createNewPlayer}>Crea il Tuo Eroe</button>
         <div>

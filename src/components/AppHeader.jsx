@@ -19,7 +19,7 @@ const navMenu = [
 
 function AppHeader() {
     return (
-        <header>
+        <header className='container'>
             {/* Logo Zone */}
             <div>
                 LOGO
