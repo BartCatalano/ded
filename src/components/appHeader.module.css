@@ -1,0 +1,14 @@
+.bodyHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+    height: 60px;
+    background-image: url(../../public/img/bannerLavaDue.webp);
+    background-size: cover;
+    background-repeat: repeat;
+}
+.logo{
+    width: 100px;
+    height: 100%;
+  }

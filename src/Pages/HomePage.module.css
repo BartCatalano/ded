@@ -1,0 +1,19 @@
+.bodyHome{
+    background-color: red;
+    background-image: url(../../public/img/background.webp);
+    background-size: contain;
+    background-repeat: repeat;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 90%;
+    text-align: center;
+    color: white;
+  }
+
+  .logo{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+  }

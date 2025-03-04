@@ -31,9 +31,9 @@ const classBonuses = {
 const razzaBonuses = {
   umano: { carisma: 1, forza: 1, destrezza: 1, intelligenza: 1, saggezza: 1, altezza: 120 },
   elfo: { destrezza: 2, intelligenza: 1, saggezza: 1,altezza: 150 },
-  nano: { costituzione: 2, forza: 2, altezza: 50 },
+  nano: { costituzione: 2, forza: 2, altezza: 50, peso:50 },
   mezzelfo: { carisma: 2, intelligenza: 1, saggezza: 1,altezza: 150 },
-  mezzorco: { forza: 2, costituzione: 1, altezza: 140 },
+  mezzorco: { forza: 2, costituzione: 1, altezza: 140, peso: 50  },
   gnomo: { intelligenza: 2, destrezza: 1, carisma: 2, altezza: 40 },
 };
 
@@ -65,8 +65,8 @@ const createNewPlayer = () => {
         },
         caratteristiche:{
             allineamento:caratteristiche,
-            altezza:Math.floor(Math.random()*100) + razzaBonus.altezza,
-            peso:Math.floor(Math.random()*100)+30,
+            altezza:Math.floor(Math.random()*100) + razzaBonus.altezza, 
+            peso:Math.floor(Math.random()*100) + razzaBonus.peso, 
         }
     });
 }

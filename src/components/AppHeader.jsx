@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import style from './AppHeader.module.css';
 
 // creo un array per dare ai bottoni della navbar un nome e un link
 const navMenu = [
@@ -19,10 +20,10 @@ const navMenu = [
 
 function AppHeader() {
     return (
-        <header className='container'>
+        <header className={`${style.bodyHeader}`}>
             {/* Logo Zone */}
-            <div>
-                LOGO
+            <div className={`${style.logo}`}>
+                <img  src="../../public/img/logo.webp" alt="" />
             </div>
             {/* Menu zone */}
             <div>

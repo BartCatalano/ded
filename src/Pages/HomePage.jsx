@@ -1,3 +1,5 @@
+import style from "./HomePage.module.css";
+
 function HomePage() {
   const classiDettails = [
     { classe: "guerriero", attributo: "forza", bonus: 3 },
@@ -11,14 +13,14 @@ function HomePage() {
   const razzaDettails = [
     { razza: "umano", attributi: { carisma: 1, forza: 1, destrezza: 1, intelligenza: 1, saggezza: 1 }, altezza: 120 },
     { razza: "elfo", attributi: { destrezza: 2, intelligenza: 1, saggezza: 1 }, altezza: 150 },
-    { razza: "nano", attributi: { costituzione: 2, forza: 2 }, altezza: 50 },
+    { razza: "nano", attributi: { costituzione: 2, forza: 2 }, altezza: 50, peso:50 },
     { razza: "mezzelfo", attributi: { carisma: 2, intelligenza: 1, saggezza: 1 }, altezza: 150 },
     { razza: "mezzorco", attributi: { forza: 2, costituzione: 1 }, altezza: 140 },
     { razza: "gnomo", attributi: { intelligenza: 2, destrezza: 1, carisma: 2 }, altezza: 40 }
   ];
 
   return (
-    <div className="container">
+    <div className={`${style.bodyHome}`}>
       <div>
         <h2>Elenco Classi</h2>
         {classiDettails.map((curClasse, index) => 
