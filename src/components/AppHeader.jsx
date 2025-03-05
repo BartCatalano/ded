@@ -9,7 +9,11 @@ const navMenu = [
     },
     {
         path: '/Creation',
-        title: 'NewPlayer'
+        title: 'Create Player'
+    },
+    {
+        path: '/Info',
+        title: 'Info'
     }
 ];
 
