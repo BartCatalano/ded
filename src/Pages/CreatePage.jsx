@@ -29,12 +29,12 @@ const classBonuses = {
 };
 // creo il bonus per la razza scelta
 const razzaBonuses = {
-  umano: { carisma: 1, forza: 1, destrezza: 1, intelligenza: 1, saggezza: 1, altezza: 120 },
-  elfo: { destrezza: 2, intelligenza: 1, saggezza: 1,altezza: 150 },
-  nano: { costituzione: 2, forza: 2, altezza: 50, peso:50 },
-  mezzelfo: { carisma: 2, intelligenza: 1, saggezza: 1,altezza: 150 },
+  umano: { carisma: 1, forza: 1, destrezza: 1, intelligenza: 1, saggezza: 1, altezza: 120,peso: 50 },
+  elfo: { destrezza: 2, intelligenza: 1, saggezza: 1,altezza: 150,peso: 40 },
+  nano: { costituzione: 2, forza: 2, altezza: 50, peso: 50 },
+  mezzelfo: { carisma: 2, intelligenza: 1, saggezza: 1,altezza: 150,peso: 40 },
   mezzorco: { forza: 2, costituzione: 1, altezza: 140, peso: 50  },
-  gnomo: { intelligenza: 2, destrezza: 1, carisma: 2, altezza: 40 },
+  gnomo: { intelligenza: 2, destrezza: 1, carisma: 2, altezza: 40,peso: 25 },
 };
 
 function CreatePage() {

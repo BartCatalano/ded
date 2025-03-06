@@ -22,7 +22,16 @@ function InfoPage() {
 
   return (
     <section className={`${style.body}`}>
+      
       <div className={`${style.bodyInfo}`}>
+        <div>
+            <p className={`${style.pergamena}`}>
+              In questa sezione troverai tutte le informazioni necessarie per creare il tuo personaggio per i giochi di ruolo.
+              Potrai scegliere tra diverse classi e razze, ognuna con i propri bonus.
+              andando sul pulsante create player potrai scegliere la tua classe e la tua razza e ottenere i bonus corrispondenti. 
+              Potrai salvare il tuo personaggio e stamparlo per averlo sempre con te durante le sessioni di gioco.
+            </p>
+          </div>
         <div>
         <h2 className={`${style.titleBody}`}>Elenco Classi</h2>
   <div className={`${style.containerCard}`}>
@@ -34,13 +43,13 @@ function InfoPage() {
             ))}
           </div>
           <h2 className={`${style.titleBody}`}>Elenco Razze</h2>
-          <div>
+          <div className={`${style.containerCard}`} >
             {razzaDettails.map((curRazza, index) => (
-              <div key={index}>
-                <h2>{curRazza.razza}</h2>
+              <div className={`${style.cardRazza}`} key={index}>
+                <div>{curRazza.razza}</div>
                 <ul>
                   {Object.entries(curRazza.attributi).map(([stat, bonus], indexx) => (
-                    <li key={indexx}>{stat}: +{bonus}</li>
+                    <li className={`${style.listabonus}`} key={indexx}>{stat}: +{bonus}</li>
                   ))}
                 </ul>
               </div>
@@ -48,6 +57,7 @@ function InfoPage() {
           </div>
         </div>
       </div>
+
     </section>
   );
 }
