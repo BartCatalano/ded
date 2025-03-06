@@ -1,0 +1,31 @@
+.statsHidden {
+    display: none;
+  }
+  
+  .statsVisible {
+    display: block;
+    
+  }
+  .body{
+    background-color: black;
+    padding-top: 50px;
+  }
+  .bodyCreate{
+    height: 100vh;
+    background-image:url(../../public/img/pergamenafuoco.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:50% 0%;
+    max-width: 1600px;
+    width: 90%;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.formCreazione{
+    display: flex;
+   
+}
+
+  
