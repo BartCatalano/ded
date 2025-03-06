@@ -22,6 +22,7 @@
 background-image: url(../../public/img/dungeondue.webp);
     background-size: cover;
     background-repeat:no-repeat;
+    background-position:50%;
     max-width: 1600px;
     width: 90%;
     text-align: center;
@@ -30,6 +31,7 @@ background-image: url(../../public/img/dungeondue.webp);
     border-radius: 10px;
     margin: 0 auto;
     padding: 20px;
+    height: 100vh;
     animation: pulseBorder 2s infinite alternate; /* Applica l'animazione */
 }
 @keyframes pulseBorder {
@@ -92,20 +94,13 @@ background-image: url(../../public/img/dungeondue.webp);
       font-size: 2rem;
     }
     .pergamena{
-        background-image: url(../../public/img/pergamena.webp);
-        background-repeat:no-repeat;
-        text-align: center;
-        color: black;
-        border: 2px solid #ff0022;
-        box-shadow: 0 0 10px #ff0000, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
-        border-radius: 10px;
-        padding: 20px; 
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        width: fit-content;
     }
     .bodyHome {
         background-image: url(../../public/img/dungeondue.webp);
             background-size: cover;
             background-repeat:no-repeat;
+            background-position:50%;
             max-width: 1600px;
             text-align: center;
             border: 2px solid #ff0022;

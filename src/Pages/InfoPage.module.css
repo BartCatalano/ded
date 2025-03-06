@@ -5,6 +5,7 @@
 }
 
 .bodyInfo {
+    height: 100vh;
     background-image: url(../../public/img/background.webp);
     background-size: contain;
     background-repeat: repeat;
@@ -59,6 +60,7 @@ display: flex;
     border-radius: 10px;
 }
 .titleBody{
+    padding: 35px 0;
     color: #00ffcc;
     font-size: 2em;
     font-weight: bold;
@@ -109,4 +111,18 @@ display: flex;
     border-radius: 10px;
     padding: 20px; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@media (max-width: 1300){
+    .bodyInfo{
+        height: max-content;
+      
+    }
+
+}
+@media (max-width: 768px){
+    .bodyInfo{
+        height: max-content;
+      
+    }
+
 }
