@@ -95,11 +95,6 @@ display: flex;
     box-shadow: 0 0 10px #ff000d, 0 0 20px #ff0000, 0 0 30px #00ffcc;
     border-radius: 10px;
 }
-.listabonus{
-    color: rgb(0, 6, 7);
-    font-size: 1em;
-    
-}
 .pergamena{
     background-image: url(../../public/img/pergamena.webp);
     background-size: cover;
@@ -111,6 +106,18 @@ display: flex;
     border-radius: 10px;
     padding: 20px; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.titleRazza{
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #000c0a;
+    border-radius: 10px;
+    padding: 3%;
+}
+.bonusRazza{
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
 }
 @media (max-width: 1300){
     .bodyInfo{

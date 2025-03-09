@@ -12,7 +12,7 @@ function InfoPage() {
   ];
 
   const razzaDettails = [
-    { razza: "umano", attributi: { carisma: 1, forza: 1, destrezza: 1, intelligenza: 1, saggezza: 1 }, altezza: 120 },
+    { razza: "umano", attributi: { carisma: 1, forza: 1, intelligenza: 1, saggezza: 1 }, altezza: 120 },
     { razza: "elfo", attributi: { destrezza: 2, intelligenza: 1, saggezza: 1 }, altezza: 150 },
     { razza: "nano", attributi: { costituzione: 2, forza: 2 }, altezza: 50, peso: 50 },
     { razza: "mezzelfo", attributi: { carisma: 2, intelligenza: 1, saggezza: 1 }, altezza: 150 },
@@ -37,7 +37,7 @@ function InfoPage() {
   <div className={`${style.containerCard}`}>
     {classiDettails.map((curClasse, index) => (
       <div className={`${style.cardClasse}`} key={index}>
-        <h3>{curClasse.classe}</h3>
+        <h3 >{curClasse.classe}</h3>
         <p>{curClasse.attributo} +3 </p>
       </div>
             ))}
@@ -46,10 +46,10 @@ function InfoPage() {
           <div className={`${style.containerCard}`} >
             {razzaDettails.map((curRazza, index) => (
               <div className={`${style.cardRazza}`} key={index}>
-                <div>{curRazza.razza}</div>
+                <div className={`${style.titleRazza}`}>{curRazza.razza}</div>
                 <ul>
                   {Object.entries(curRazza.attributi).map(([stat, bonus], indexx) => (
-                    <li className={`${style.listabonus}`} key={indexx}>{stat}: +{bonus}</li>
+                    <li className={`${style.bonusRazza}`} key={indexx}>{stat}: +{bonus}</li>
                   ))}
                 </ul>
               </div>

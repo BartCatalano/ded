@@ -1,7 +1,13 @@
+import style  from "./AppFooter.module.css";
+
 function AppFooter() {
   return (
-    <footer>
-      <p>© 2025 D&d BartArcade</p>
+    <footer className={`${style.footer}`}>
+      <div>
+      <p>© 2025 FG BartArcade</p></div>
+      <div>
+      <a href="mailto:catalanobartolomeo@gmail.com" className={`${style.contactLink}`}>Contattami</a>
+      </div>
     </footer>
   );
 }
