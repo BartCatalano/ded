@@ -23,11 +23,11 @@ function HomePage() {
   <div className={`${style.bodyHome}`}>
     <p className={`${style.pergamena}`}>Fantasy Generator è nata per dare la possibilità a tutti i giocatori
       di ruolo di creare il proprio personaggio in modo semplice e veloce.
-      cliccando sul pulsante Create Player potrai scegliere la razza, la classe, 
+      cliccando sul pulsante "New Player" potrai scegliere la razza, la classe, 
       l'allineamento e il sesso del tuo personaggio.
-      Se invece clicchi sul pulsante info avrai accesso a tutti i bonus delle classi
+      Se invece clicchi sul pulsante "Info" avrai accesso a tutti i bonus delle classi
       e delle razze disponibili.
-      una volta creato il tuo nuovo eroe potrai salvarlo e stamparlo per averlo sempre con te.
+      una volta creato il tuo nuovo eroe potrai stamparlo per averlo sempre con te.
     </p>
     <div className={style.textContainer}>
             <motion.h1 

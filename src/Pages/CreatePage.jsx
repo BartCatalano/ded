@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import style from "./CreatePage.module.css";
 // scheda personaggio vuota
@@ -48,14 +49,14 @@ function CreatePage() {
   const [razza, setRazza] = useState();
   const [newPlayer, setNewPlayer] = useState(Player);
   const [sesso, setSesso] = useState("");
-  const [isCharacterCreated, setIsCharacterCreated] = useState(false);
+  const navigate = useNavigate();
 
 
   const createNewPlayer = () => {
     // prendo i bonus della classe scelta
     const bonus = classBonuses[classe] || {};
     const razzaBonus = razzaBonuses[razza] || {};
-    setNewPlayer({
+    const NewPlayer = {
       nome: nameHero,
       sesso: sesso,
       razza: razza,
@@ -73,8 +74,8 @@ function CreatePage() {
         altezza: Math.floor(Math.random() * 100) + razzaBonus.altezza,
         peso: Math.floor(Math.random() * 100) + razzaBonus.peso,
       }
-    });
-    setIsCharacterCreated(true);
+    };
+    navigate("/stampa", { state: { newPlayer } })
   }
 
 
@@ -106,7 +107,7 @@ function CreatePage() {
         <div className={`${style.bodyCreate}`}>
           {/* form creativo */}
           <section className={`${style.formCreazione}`}>
-            <h1>Crea Il tuo Eroe</h1>
+            <div className={`${style.titoloPergamena}`}>Pergamena di creazione</div>
             {/* inserisco l'input di nome e la selezione di razza classe allineamento */}
             {/* nome eroe */}
             <label htmlFor="Hero">Nome Eroe:</label>
@@ -117,14 +118,14 @@ function CreatePage() {
             <div className={`${style.formCreazione}`} >
 
               <label htmlFor="dropdown">
-                la razza del tuo eroe:
+                La razza del tuo eroe:
               </label>
               <select
                 id="dropdown"
                 value={razza}
                 onChange={selezioneRazza}
               >
-                <option value="">Seleziona...</option>
+                <option value="">Razza</option>
                 <option value="umano">Umano</option>
                 <option value="elfo">Elfo</option>
                 <option value="nano">Nano</option>
@@ -137,14 +138,14 @@ function CreatePage() {
             {/* selezione sesso */}
             <div className={`${style.formCreazione}`}>
               <label htmlFor="dropdown">
-              il sesso del tuo eroe:
+              Il sesso del tuo Eroe:
               </label>
               <select
                 id="dropdown"
                 value={sesso}
                 onChange={selezioneSesso}
               >
-                <option value="">Seleziona...</option>
+                <option value="">Sesso</option>
                 <option value="Uomo">Uomo</option>
                 <option value="Donna">Donna</option>
               </select>
@@ -153,14 +154,14 @@ function CreatePage() {
             <div className={`${style.formCreazione}`} >
 
               <label htmlFor="dropdown">
-                La tua classe:
+                La classe del tuo Eroe:
               </label>
               <select
                 id="dropdown"
                 value={classe}
                 onChange={selezioneClasse}
               >
-                <option value="">Seleziona...</option>
+                <option value="">Classe</option>
                 <option value="guerriero">Guerriero</option>
                 <option value="mago">Mago</option>
                 <option value="ladro">Ladro</option>
@@ -171,14 +172,14 @@ function CreatePage() {
               {/* inserimento allineamento */}
               <div className={`${style.formCreazione}`}>
                 <label htmlFor="dropdown">
-                  allineamento:
+                  Allineamento Eroe:
                 </label>
                 <select
                   id="allineamento"
                   value={caratteristiche.allineamento}
                   onChange={creazioneCaratteristiche}
                 >
-                  <option value="">Seleziona...</option>
+                  <option value="">Allineamento</option>
                   <option value="legale buono">Legale Buono</option>
                   <option value="neutrale buono">Neutrale Buono</option>
                   <option value="caotico buono">Caotico Buono</option>
@@ -191,27 +192,8 @@ function CreatePage() {
                 </select>
               </div>
             </div>
-            <button onClick={createNewPlayer}>Crea il Tuo Eroe</button>
+            <button className={`${style.buttonCreation}`} onClick={createNewPlayer}>Crea il Tuo Eroe</button>
           </section>
-          {/* creazione del personaggio */}
-          <div className={isCharacterCreated ? style.statsVisible : style.statsHidden}>
-            <h2>{newPlayer.nome}</h2>
-            <h3>{newPlayer.razza}</h3>
-            <h3>{newPlayer.classe}</h3>
-            <h3>{newPlayer.sesso}</h3>
-            <h3>Statistiche</h3>
-            <p>Forza: {newPlayer.statistiche.forza}</p>
-            <p>Destrezza: {newPlayer.statistiche.destrezza}</p>
-            <p>Costituzione: {newPlayer.statistiche.costituzione}</p>
-            <p>Intelligenza: {newPlayer.statistiche.intelligenza}</p>
-            <p>Saggezza: {newPlayer.statistiche.saggezza}</p>
-            <p>Carisma: {newPlayer.statistiche.carisma}</p>
-            <h3>Caratteristiche</h3>
-            <p>Allineamento: {newPlayer.caratteristiche.allineamento}</p>
-            <p>Altezza: {newPlayer.caratteristiche.altezza}</p>
-            <p>Peso: {newPlayer.caratteristiche.peso}</p>
-
-          </div>
         </div></div>
     </>
   );

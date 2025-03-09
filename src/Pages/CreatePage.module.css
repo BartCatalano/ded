@@ -18,23 +18,56 @@
   background-size: cover;
   background-position: center;
     background-image:url(../../public/img/pergamenafuoco.webp);
-    
+  }
 .formCreazione{
   display: flex;
   flex-direction: column;
   gap: 5px;
  text-align: center;
+ align-items: center;
 }
-}
+
 .inputCompilativo{
   background-image: url(../../public/img/pergamena.webp);
-  border: 2px solid #ff0022;
+  border: 2px solid #e5ff00bd;
     box-shadow: 0 0 10px #ff0000, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
-    margin: 5%;
+    margin: 3%;
 }
 select{
   background-image: url(../../public/img/pergamena.webp);
   margin: 2%;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #e5ff00bd;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #0a0800ee, 0 0 30px #fbff00;
 }
-
+.titoloPergamena{
+  font-style: italic;
+  font-family: 'Cinzel', serif;
+  font-size: 40px;
+  color: #0a0a0af3;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 15%;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #73ff00, 0 0 30px #4400ff;
+}
+label{
+  font-family: 'Cinzel', serif;
+  font-size: 25px;
+  width: 100%;
+  font-style: italic;
+  text-shadow: 0 0 10px #0077ff, 0 0 20px #000007, 0 0 30px #4400ff;
+}
   
+.buttonCreation{
+  font-family: 'Cinzel', serif; 
+    font-size: 18px;
+    color: #040800;
+    margin: 3px;
+    background: linear-gradient(45deg, #826400, #e22b2b, #c3f304);
+    padding: 5px 8px;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(226, 43, 43, 0.7);
+}
