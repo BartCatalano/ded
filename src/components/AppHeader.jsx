@@ -9,7 +9,7 @@ const navMenu = [
     },
     {
         path: '/Creation',
-        title: 'Create Player'
+        title: 'New Player'
     },
     {
         path: '/Info',
@@ -30,9 +30,9 @@ function AppHeader() {
                 <img  src="../../public/img/logo.webp" alt="" />
             </div>
             {/* Menu zone */}
-            <div>
+            <div className={`${style.buttonZone}`}>
                 {navMenu.map((CurButton) => (
-                    <NavLink to={CurButton.path} key={CurButton.title}> {CurButton.title}</NavLink>
+                    <NavLink className={`${style.magicButton}`} to={CurButton.path} key={CurButton.title}> {CurButton.title}</NavLink>
                 ))}</div>
         </header>
     );
