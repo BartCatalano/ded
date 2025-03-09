@@ -11,21 +11,30 @@
     padding-top: 50px;
   }
   .bodyCreate{
-    height: 100vh;
-    background-image:url(../../public/img/pergamenafuoco.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:50% 0%;
-    max-width: 1600px;
-    width: 90%;
-    text-align: center;
-    border-radius: 10px;
-    margin: 0 auto;
-    padding: 20px;
-}
-.formCreazione{
     display: flex;
-   
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background-size: cover;
+  background-position: center;
+    background-image:url(../../public/img/pergamenafuoco.webp);
+    
+.formCreazione{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+ text-align: center;
+}
+}
+.inputCompilativo{
+  background-image: url(../../public/img/pergamena.webp);
+  border: 2px solid #ff0022;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    margin: 5%;
+}
+select{
+  background-image: url(../../public/img/pergamena.webp);
+  margin: 2%;
 }
 
   

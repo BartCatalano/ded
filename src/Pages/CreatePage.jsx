@@ -35,8 +35,8 @@ const razzaBonuses = {
   umano: { carisma: 1, forza: 1, destrezza: 1, intelligenza: 1, saggezza: 1, altezza: 120, peso: 50 },
   elfo: { destrezza: 2, intelligenza: 1, saggezza: 1, altezza: 150, peso: 40 },
   nano: { costituzione: 2, forza: 2, altezza: 50, peso: 50 },
-  mezzelfo: { carisma: 2, intelligenza: 1, saggezza: 1, altezza: 150, peso: 40 },
-  mezzorco: { forza: 2, costituzione: 1, altezza: 140, peso: 50 },
+  Elfo: { carisma: 2, intelligenza: 1, saggezza: 1, altezza: 150, peso: 40 },
+  Orco: { forza: 2, costituzione: 1, altezza: 140, peso: 50 },
   gnomo: { intelligenza: 2, destrezza: 1, carisma: 2, altezza: 40, peso: 25 },
 };
 
@@ -110,14 +110,14 @@ function CreatePage() {
             {/* inserisco l'input di nome e la selezione di razza classe allineamento */}
             {/* nome eroe */}
             <label htmlFor="Hero">Nome Eroe:</label>
-            <input type="text" value={nameHero} onChange={creazioneNome} name="Hero" id="Hero" />
+            <input className={`${style.inputCompilativo}`} type="text" value={nameHero} onChange={creazioneNome} name="Hero" id="Hero" />
 
             {/* inserimento caratteristiche */}
             {/* selezione razza */}
-            <div >
+            <div className={`${style.formCreazione}`} >
 
               <label htmlFor="dropdown">
-                Scegli La tua razza:
+                la razza del tuo eroe:
               </label>
               <select
                 id="dropdown"
@@ -128,16 +128,16 @@ function CreatePage() {
                 <option value="umano">Umano</option>
                 <option value="elfo">Elfo</option>
                 <option value="nano">Nano</option>
-                <option value="mezzelfo">Mezzelfo</option>
-                <option value="mezzorco">Mezzorco</option>
+                <option value="Elfo">Elfo</option>
+                <option value="Orco">Orco</option>
                 <option value="gnomo">Gnomo</option>
               </select>
 
             </div>
             {/* selezione sesso */}
-            <div>
+            <div className={`${style.formCreazione}`}>
               <label htmlFor="dropdown">
-                Scegli il sesso del tuo eroe:
+              il sesso del tuo eroe:
               </label>
               <select
                 id="dropdown"
@@ -150,10 +150,10 @@ function CreatePage() {
               </select>
             </div>
             {/* selezione classe */}
-            <div >
+            <div className={`${style.formCreazione}`} >
 
               <label htmlFor="dropdown">
-                Scegli La tua classe:
+                La tua classe:
               </label>
               <select
                 id="dropdown"
@@ -169,9 +169,9 @@ function CreatePage() {
                 <option value="druido">Druido</option>
               </select>
               {/* inserimento allineamento */}
-              <div>
+              <div className={`${style.formCreazione}`}>
                 <label htmlFor="dropdown">
-                  Scegli il tuo allineamento:
+                  allineamento:
                 </label>
                 <select
                   id="allineamento"
