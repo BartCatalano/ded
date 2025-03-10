@@ -15,7 +15,7 @@ function InfoPage() {
     { razza: "Umano", attributi: { carisma: 1, forza: 1, intelligenza: 1, saggezza: 1 }, altezza: 120 },
     { razza: "Elfo", attributi: { destrezza: 2, intelligenza: 1, saggezza: 1 }, altezza: 150 },
     { razza: "Nano", attributi: { costituzione: 2, forza: 2 }, altezza: 50, peso: 50 },
-    { razza: "Elfo", attributi: { carisma: 2, intelligenza: 1, saggezza: 1 }, altezza: 150 },
+    { razza: "Mezzelfo", attributi: { carisma: 2, intelligenza: 1, saggezza: 1 }, altezza: 150 },
     { razza: "Orco", attributi: { forza: 2, costituzione: 1 }, altezza: 140 },
     { razza: "Gnomo", attributi: { intelligenza: 2, destrezza: 1, carisma: 2 }, altezza: 40 }
   ];

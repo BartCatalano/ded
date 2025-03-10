@@ -34,9 +34,9 @@ const classBonuses = {
 // creo il bonus per la razza scelta
 const razzaBonuses = {
   umano: { carisma: 1, forza: 1, destrezza: 1, intelligenza: 1, saggezza: 1, altezza: 120, peso: 50 },
-  elfo: { destrezza: 2, intelligenza: 1, saggezza: 1, altezza: 150, peso: 40 },
+  Elfo: { destrezza: 2, intelligenza: 1, saggezza: 1, altezza: 150, peso: 40 },
   nano: { costituzione: 2, forza: 2, altezza: 50, peso: 50 },
-  Elfo: { carisma: 2, intelligenza: 1, saggezza: 1, altezza: 150, peso: 40 },
+  Mezzelfo: { carisma: 2, intelligenza: 1, saggezza: 1, altezza: 150, peso: 40 },
   Orco: { forza: 2, costituzione: 1, altezza: 140, peso: 50 },
   gnomo: { intelligenza: 2, destrezza: 1, carisma: 2, altezza: 40, peso: 25 },
 };
@@ -56,7 +56,7 @@ function CreatePage() {
     // prendo i bonus della classe scelta
     const bonus = classBonuses[classe] || {};
     const razzaBonus = razzaBonuses[razza] || {};
-    const NewPlayer = {
+    const newPlayer = {
       nome: nameHero,
       sesso: sesso,
       razza: razza,
@@ -129,7 +129,7 @@ function CreatePage() {
                 <option value="umano">Umano</option>
                 <option value="elfo">Elfo</option>
                 <option value="nano">Nano</option>
-                <option value="Elfo">Elfo</option>
+                <option value="MezzElfo">Mezzelfo</option>
                 <option value="Orco">Orco</option>
                 <option value="gnomo">Gnomo</option>
               </select>
